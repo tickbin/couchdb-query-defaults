@@ -1,0 +1,11 @@
+{
+  "name": "couchdb-query-defaults",
+  "version": "0.0.1",
+  "description": "augment couchdb 2.0 query selectors with defaults",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Bowers <jonotron@gmail.com>",
+  "license": "MIT"
+}
