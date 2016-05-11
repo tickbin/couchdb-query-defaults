@@ -18,3 +18,21 @@ test('empty selector', t => {
   t.deepEquals(modified, expected)
   t.end()
 })
+
+test('selecting another field', t => {
+  const selector = { field: 1 }
+  const modified = addDefault(selector, defaultId)
+  const expected = { field: 1, _id: {'$gte': null }}
+
+  t.deepEquals(modified, expected)
+  t.end()
+})
+
+test('selecting default field does not add default', t => {
+  const selector = { _id: 1 }
+  const modified = addDefault(selector, defaultId)
+  const expected = { _id: 1 }
+
+  t.deepEquals(modified, expected)
+  t.end()
+})
