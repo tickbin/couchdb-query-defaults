@@ -10,5 +10,8 @@
   "license": "MIT",
   "devDependencies": {
     "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "lodash.flatten": "^4.2.0"
   }
 }

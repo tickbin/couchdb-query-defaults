@@ -1,5 +1,6 @@
 var test = require('tape')
 var addDefault = require('./')
+var pouchfind = require('pouchdb-find')
 
 const defaultId = { _id: {'$gte': null} }
 
@@ -34,5 +35,16 @@ test('selecting default field does not add default', t => {
   const expected = { _id: 1 }
 
   t.deepEquals(modified, expected)
+  t.end()
+})
+
+test('selecting default and another field does not add default', t => {
+  const selector = { '$and': [
+    {_id: 1},
+    {field: 1} 
+  ]}
+  const modified = addDefault(selector, defaultId)
+
+  t.deepEquals(modified, selector)
   t.end()
 })
