@@ -70,3 +70,21 @@ test('only non-selected defaults are added', t => {
   t.deepEquals(modified, expected)
   t.end()
 })
+
+test('fields included in $or are not considered default', t => {
+  const selector = { '$or': [
+    {_id: 1},
+    {b: 2}
+  ]}
+  const expected = {
+    _id: {'$gte': null},
+    '$or': [
+      {_id: 1},
+      {b:2}
+    ]
+  }
+  const modified = addDefault(selector, defaultId)
+
+  t.deepEquals(modified, expected)
+  t.end()
+})
