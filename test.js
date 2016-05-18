@@ -1,6 +1,5 @@
 var test = require('tape')
 var addDefault = require('./')
-var pouchfind = require('pouchdb-find')
 
 const defaultId = { _id: {'$gte': null} }
 
