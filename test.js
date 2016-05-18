@@ -48,3 +48,25 @@ test('selecting default and another field does not add default', t => {
   t.deepEquals(modified, selector)
   t.end()
 })
+
+test('only non-selected defaults are added', t => {
+  const selector = { '$and': [
+    {a: 1},
+    {b: 2} 
+  ]}
+  const defaults = {
+    _id: {'$gte': null},
+    a: {'$eq': 2}
+  }
+  const expected = { 
+    _id: {'$gte': null},
+    '$and': [
+      {a: 1},
+      {b: 2} 
+    ]
+  }
+  const modified = addDefault(selector, defaults)
+
+  t.deepEquals(modified, expected)
+  t.end()
+})
