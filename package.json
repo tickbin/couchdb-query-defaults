@@ -6,6 +6,7 @@
   "scripts": {
     "test": "tape test.js"
   },
+  "repository": "https://github.com/tickbin/tickbin",
   "author": "Jonathan Bowers <jonotron@gmail.com>",
   "license": "MIT",
   "devDependencies": {
