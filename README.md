@@ -22,4 +22,5 @@ const defaults = {
 const defaultedSelector = addDefault(selector, defaults)
 ```
 
+Lead Maintainer: [Jonathan Bowers](https://github.com/jonotron)
 
