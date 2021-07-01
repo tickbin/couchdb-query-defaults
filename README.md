@@ -1,4 +1,8 @@
-[![Build Status](https://semaphoreci.com/api/v1/twostoryrobot/couchdb-query-defaults/branches/master/shields_badge.svg)](https://semaphoreci.com/twostoryrobot/couchdb-query-defaults)
+# Deprecation Notice 
+
+**Deprecation notice:** This project and codebase are not maintained. We might revisit this again in the future, but for now the code is read-only :)
+
+# Query defaults
 
 add default selector fields to your couchdb 2.0 find query selector
 
